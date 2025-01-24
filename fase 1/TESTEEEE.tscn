@@ -1,0 +1,595 @@
+[gd_scene load_steps=17 format=3 uid="uid://cjhykmliq3stb"]
+
+[ext_resource type="Script" path="res://fase 1/PANFLETOS.gd" id="1_buexm"]
+[ext_resource type="Texture2D" uid="uid://c15ujpa7eechw" path="res://img/fase 1/panfleto triplic.png" id="2_tlvw2"]
+[ext_resource type="Texture2D" uid="uid://dhtfrrlgbclhf" path="res://img/fase 1/estradinha.png" id="2_wcq8q"]
+[ext_resource type="Texture2D" uid="uid://cx4ler3kildw8" path="res://img/fase 1/fundo_completo.png" id="2_y5ci3"]
+[ext_resource type="Texture2D" uid="uid://b2d1pm86vv28g" path="res://img/fase 1/panfleto gripe.png" id="3_3w7fi"]
+[ext_resource type="Texture2D" uid="uid://cbnm65amix2gk" path="res://img/textbox meio.png" id="3_epkvq"]
+[ext_resource type="Texture2D" uid="uid://qdwanf7gcqlv" path="res://img/fase 1/planfleto covid.png" id="4_l2pby"]
+[ext_resource type="Texture2D" uid="uid://pxajx28xabi4" path="res://img/fase 1/poste 4 sem borda.png" id="6_7mtbq"]
+[ext_resource type="Texture2D" uid="uid://bf45d8pcy23kq" path="res://img/fase 1/poste 1.png" id="8_n6nym"]
+[ext_resource type="Texture2D" uid="uid://dec55ks2ds3aj" path="res://img/fase 1/poste 2.png" id="9_8b8lx"]
+[ext_resource type="Texture2D" uid="uid://btisjny4o2pjj" path="res://img/fase 1/poste 3.png" id="10_p4f6o"]
+[ext_resource type="Texture2D" uid="uid://dl5773jp2ie37" path="res://fase 1/botao retornar menu.png" id="12_rekmf"]
+[ext_resource type="AudioStream" uid="uid://bce5gqiervl4k" path="res://sfx/fase 1.wav" id="13_6vnwc"]
+
+[sub_resource type="Animation" id="Animation_are06"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FundoCompleto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1800, 277)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Estradinha:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1790.5, 582)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CIDADE1/Poste1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(90.375, 268.75)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CIDADE1/Poste7E:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(666, 260)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CIDADE1/Poste2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(131.5, 272)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CIDADE1/Poste3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(407, 274)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CIDADE1/Poste4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(680, 272)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CIDADE1/Poste9E:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2231, 264)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CIDADE1/Poste5:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2503, 265)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CIDADE1/Poste8E:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3257, 251)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CIDADE1/Poste6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(358, 269)]
+}
+
+[sub_resource type="Animation" id="Animation_ob02s"]
+resource_name = "RUA"
+length = 35.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FundoCompleto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1798, 279), Vector2(-600, 269)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Estradinha:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 29.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1798, 582), Vector2(-600, 582)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CIDADE1/Poste1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 29.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(300, 273), Vector2(-2092, 269)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CIDADE1/Poste7E:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(666, 260), Vector2(-1632, 260)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CIDADE1/Poste2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 29.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1211, 282), Vector2(-1188, 272)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CIDADE1/Poste3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 29.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1483, 283), Vector2(-909, 270)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CIDADE1/Poste4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 29.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1772, 279), Vector2(-620, 268)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CIDADE1/Poste9E:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 29.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2231, 264), Vector2(-161, 256)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CIDADE1/Poste5:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2503, 265), Vector2(107, 273)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CIDADE1/Poste8E:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 29.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(880, 259), Vector2(-1403, 256)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CIDADE1/Poste6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2722, 274), Vector2(353, 269)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ucx8i"]
+_data = {
+"RESET": SubResource("Animation_are06"),
+"RUA": SubResource("Animation_ob02s")
+}
+
+[node name="Fase 1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_buexm")
+
+[node name="FundoCompleto" type="Sprite2D" parent="."]
+modulate = Color(0.498039, 0.498039, 0.498039, 1)
+position = Vector2(1800, 277)
+texture = ExtResource("2_y5ci3")
+
+[node name="Estradinha" type="Sprite2D" parent="."]
+position = Vector2(1790.5, 582)
+scale = Vector2(2.81484, 2.5)
+texture = ExtResource("2_wcq8q")
+
+[node name="CIDADE1" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -0.00012207
+offset_top = -2.00009
+offset_right = 798.0
+offset_bottom = -2.00009
+
+[node name="Poste9E" type="Sprite2D" parent="CIDADE1"]
+position = Vector2(2231, 264)
+scale = Vector2(3.375, 4.54687)
+texture = ExtResource("6_7mtbq")
+
+[node name="PlanfletoCovid" type="Sprite2D" parent="CIDADE1/Poste9E"]
+visible = false
+position = Vector2(1.11127, -24.6323)
+scale = Vector2(0.0633684, 0.0910653)
+texture = ExtResource("4_l2pby")
+
+[node name="PanfletoGripe" type="Sprite2D" parent="CIDADE1/Poste9E"]
+visible = false
+position = Vector2(1.48149, 29.031)
+scale = Vector2(0.0613427, 0.0781787)
+texture = ExtResource("3_3w7fi")
+
+[node name="Button9_covid" type="Button" parent="CIDADE1/Poste9E"]
+offset_left = -14.0
+offset_top = -46.0
+offset_right = 14.0
+offset_bottom = -6.0
+
+[node name="Button9_gripe" type="Button" parent="CIDADE1/Poste9E"]
+offset_left = -14.0
+offset_top = 9.0
+offset_right = 13.0
+offset_bottom = 49.0
+
+[node name="Poste8E" type="Sprite2D" parent="CIDADE1"]
+position = Vector2(3257, 251)
+scale = Vector2(3.375, 4.54687)
+texture = ExtResource("6_7mtbq")
+
+[node name="PlanfletoCovid" type="Sprite2D" parent="CIDADE1/Poste8E"]
+visible = false
+position = Vector2(6.10352e-05, 28.5911)
+scale = Vector2(0.0645255, 0.0814003)
+texture = ExtResource("4_l2pby")
+
+[node name="PanfletoTriplic" type="Sprite2D" parent="CIDADE1/Poste8E"]
+visible = false
+position = Vector2(0.0370331, -26.8453)
+scale = Vector2(0.0542535, 0.0824205)
+texture = ExtResource("2_tlvw2")
+
+[node name="Button8_covid" type="Button" parent="CIDADE1/Poste8E"]
+offset_left = -12.0
+offset_top = 9.0
+offset_right = 13.0
+offset_bottom = 49.0
+
+[node name="Button8_triplic" type="Button" parent="CIDADE1/Poste8E"]
+offset_left = -13.0
+offset_top = -47.0
+offset_right = 12.0
+offset_bottom = -7.0
+
+[node name="Poste7E" type="Sprite2D" parent="CIDADE1"]
+position = Vector2(666, 260)
+scale = Vector2(3.375, 4.54687)
+texture = ExtResource("6_7mtbq")
+
+[node name="PanfletoGripe" type="Sprite2D" parent="CIDADE1/Poste7E"]
+visible = false
+position = Vector2(1.48149, 29.031)
+scale = Vector2(0.0613427, 0.0781787)
+texture = ExtResource("3_3w7fi")
+
+[node name="PanfletoTriplic" type="Sprite2D" parent="CIDADE1/Poste7E"]
+visible = false
+position = Vector2(0.0370331, -26.8453)
+scale = Vector2(0.0542535, 0.0824205)
+texture = ExtResource("2_tlvw2")
+
+[node name="Button7_gripe" type="Button" parent="CIDADE1/Poste7E"]
+offset_left = -14.0
+offset_top = 9.0
+offset_right = 14.0
+offset_bottom = 50.0
+
+[node name="Button7_triplic" type="Button" parent="CIDADE1/Poste7E"]
+offset_left = -14.08
+offset_top = -46.4055
+offset_right = 12.92
+offset_bottom = -6.40547
+
+[node name="Poste6" type="Sprite2D" parent="CIDADE1"]
+position = Vector2(358, 269)
+scale = Vector2(3.09375, 4.39062)
+texture = ExtResource("9_8b8lx")
+
+[node name="Button_poste6" type="Button" parent="CIDADE1/Poste6"]
+offset_left = -14.0
+offset_top = -42.0
+offset_right = 14.0
+offset_bottom = -1.0
+
+[node name="PanfletoGripe" type="Sprite2D" parent="CIDADE1/Poste6"]
+visible = false
+position = Vector2(0.969604, -20.2704)
+scale = Vector2(0.0601721, 0.0871886)
+texture = ExtResource("3_3w7fi")
+
+[node name="Poste5" type="Sprite2D" parent="CIDADE1"]
+position = Vector2(2503, 265)
+scale = Vector2(3.0625, 4.34375)
+texture = ExtResource("10_p4f6o")
+
+[node name="Button_poste5" type="Button" parent="CIDADE1/Poste5"]
+offset_left = -14.0
+offset_top = -41.0
+offset_right = 14.0
+offset_bottom = -2.0
+
+[node name="PanfletoTriplic" type="Sprite2D" parent="CIDADE1/Poste5"]
+visible = false
+position = Vector2(0, -20.9496)
+scale = Vector2(0.0596301, 0.0877923)
+texture = ExtResource("2_tlvw2")
+
+[node name="Poste4" type="Sprite2D" parent="CIDADE1"]
+position = Vector2(680, 272)
+scale = Vector2(3.28906, 4.41797)
+texture = ExtResource("8_n6nym")
+
+[node name="Button_poste4" type="Button" parent="CIDADE1/Poste4"]
+offset_left = -13.0
+offset_top = -45.0
+offset_right = 13.0
+offset_bottom = -6.0
+
+[node name="PlanfletoCovid2" type="Sprite2D" parent="CIDADE1/Poste4"]
+visible = false
+position = Vector2(0, -26.7799)
+scale = Vector2(0.0527019, 0.0792993)
+texture = ExtResource("4_l2pby")
+
+[node name="Poste3" type="Sprite2D" parent="CIDADE1"]
+position = Vector2(407, 274)
+scale = Vector2(3.0625, 4.34375)
+texture = ExtResource("10_p4f6o")
+
+[node name="Button_poste3" type="Button" parent="CIDADE1/Poste3"]
+offset_left = -12.0
+offset_top = -40.0
+offset_right = 12.0
+offset_bottom = -3.0
+
+[node name="PanfletoTriplic" type="Sprite2D" parent="CIDADE1/Poste3"]
+visible = false
+position = Vector2(0, -20.9496)
+scale = Vector2(0.0596301, 0.0877923)
+texture = ExtResource("2_tlvw2")
+
+[node name="Poste2" type="Sprite2D" parent="CIDADE1"]
+position = Vector2(131.5, 272)
+scale = Vector2(3.09375, 4.39062)
+texture = ExtResource("9_8b8lx")
+
+[node name="Button_poste2" type="Button" parent="CIDADE1/Poste2"]
+offset_left = -13.0
+offset_top = -40.0
+offset_right = 13.0
+offset_bottom = -2.0
+
+[node name="PanfletoGripe" type="Sprite2D" parent="CIDADE1/Poste2"]
+visible = false
+position = Vector2(0.808067, -21.8648)
+scale = Vector2(0.051531, 0.0854092)
+texture = ExtResource("3_3w7fi")
+
+[node name="Poste1" type="Sprite2D" parent="CIDADE1"]
+position = Vector2(90.375, 268.75)
+scale = Vector2(3.28906, 4.41797)
+texture = ExtResource("8_n6nym")
+
+[node name="Button_poste1" type="Button" parent="CIDADE1/Poste1"]
+offset_left = -12.0
+offset_top = -45.0
+offset_right = 12.0
+offset_bottom = -7.0
+
+[node name="PlanfletoCovid2" type="Sprite2D" parent="CIDADE1/Poste1"]
+visible = false
+position = Vector2(0, -27.5579)
+scale = Vector2(0.0527019, 0.0823387)
+texture = ExtResource("4_l2pby")
+
+[node name="fundo" type="AnimationPlayer" parent="."]
+autoplay = "RUA"
+libraries = {
+"": SubResource("AnimationLibrary_ucx8i")
+}
+
+[node name="TextboxMeio" type="Sprite2D" parent="."]
+position = Vector2(1011.29, 322.796)
+rotation = 1.5708
+scale = Vector2(1.30759, 0.86443)
+texture = ExtResource("3_epkvq")
+
+[node name="triplic" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 869.0
+offset_top = 241.0
+offset_right = 1386.0
+offset_bottom = 753.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_tlvw2")
+
+[node name="gripe" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 870.0
+offset_top = 444.0
+offset_right = 1387.0
+offset_bottom = 956.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("3_3w7fi")
+
+[node name="covid" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 869.0
+offset_top = 38.0
+offset_right = 1381.0
+offset_bottom = 550.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_l2pby")
+
+[node name="Covid_ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 71.0
+offset_right = 1124.0
+offset_bottom = 163.0
+
+[node name="Triplic_ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1034.0
+offset_top = 278.0
+offset_right = 1119.0
+offset_bottom = 370.0
+rounded = true
+
+[node name="Gripe_ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 478.0
+offset_right = 1124.0
+offset_bottom = 570.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 119.0
+texture_normal = ExtResource("12_rekmf")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_6vnwc")
+volume_db = -13.176
+autoplay = true
+
+[connection signal="pressed" from="CIDADE1/Poste9E/Button9_covid" to="." method="_on_button_9_covid_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste9E/Button9_gripe" to="." method="_on_button_9_gripe_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste8E/Button8_covid" to="." method="_on_button_8_covid_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste8E/Button8_triplic" to="." method="_on_button_8_triplic_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste7E/Button7_gripe" to="." method="_on_button_7_gripe_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste7E/Button7_triplic" to="." method="_on_button_7_triplic_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste6/Button_poste6" to="." method="_on_button_poste_6_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste5/Button_poste5" to="." method="_on_button_poste_5_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste4/Button_poste4" to="." method="_on_button_poste_4_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste3/Button_poste3" to="." method="_on_button_poste_3_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste2/Button_poste2" to="." method="_on_button_poste2_pressed"]
+[connection signal="pressed" from="CIDADE1/Poste1/Button_poste1" to="." method="_on_button_poste1_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_menuBUTAO_pressed"]

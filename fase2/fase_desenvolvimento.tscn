@@ -1,0 +1,1365 @@
+[gd_scene load_steps=50 format=3 uid="uid://vhervhkb0ttf"]
+
+[ext_resource type="PackedScene" uid="uid://cs3pkqg8a78hw" path="res://fase2/frasco.tscn" id="1_2abhv"]
+[ext_resource type="Script" path="res://fase2/fase_desenvolvimento.gd" id="1_ldfjf"]
+[ext_resource type="Texture2D" uid="uid://721oyymws4jx" path="res://fase2/sprites/fundo fase 21.png" id="2_nnki3"]
+[ext_resource type="Texture2D" uid="uid://8g1abtcpbkgl" path="res://fase2/sprites/barra_equilibrio.png" id="4_4gdny"]
+[ext_resource type="Texture2D" uid="uid://bu1g7okruwtd" path="res://fase2/sprites/fundo fase 21 - Copia.png" id="4_jhcsu"]
+[ext_resource type="Texture2D" uid="uid://ckv48msvkow2c" path="res://fase2/sprites/Purple Effect Bullet Impact Explosion 32x32.png" id="4_t2cdh"]
+[ext_resource type="Texture2D" uid="uid://dramei45v28v1" path="res://fase2/sprites/barra_equilibrio_progresso.png" id="5_ddbb3"]
+[ext_resource type="Texture2D" uid="uid://uvogsmom836a" path="res://fase2/sprites/barra_equilibrio_fundo.png" id="5_gm2vk"]
+[ext_resource type="Texture2D" uid="uid://bqo86yvjidm7o" path="res://fase2/sprites/botão_aceitar_vacina (1).png" id="6_w33o5"]
+[ext_resource type="Texture2D" uid="uid://brrk05kx75biv" path="res://fase2/sprites/Fritz_gigante.png" id="8_wbxcb"]
+[ext_resource type="Texture2D" uid="uid://de5yrhv47ppe0" path="res://fase2/sprites/textbox comeco.png" id="8_ycdu4"]
+[ext_resource type="Texture2D" uid="uid://b4nh5ag7rct3c" path="res://fase2/sprites/textbox meio.png" id="9_7vhgm"]
+[ext_resource type="Texture2D" uid="uid://xfbik0f435hb" path="res://fase2/sprites/Fritz_bocaaberta.png" id="9_cto7e"]
+[ext_resource type="Texture2D" uid="uid://y6q0adiq44gb" path="res://fase2/sprites/textbox final.png" id="10_jumem"]
+[ext_resource type="Texture2D" uid="uid://koh4nejyt2yd" path="res://fase2/sprites/botao_fala.png" id="11_wawac"]
+[ext_resource type="Texture2D" uid="uid://dl5773jp2ie37" path="res://fase 1/botao retornar menu.png" id="16_46t25"]
+[ext_resource type="AudioStream" uid="uid://dguqumitmxliu" path="res://sfx/dica fase 2.wav" id="17_73hqm"]
+[ext_resource type="AudioStream" uid="uid://cmkbv82ds0h8k" path="res://sfx/Vc errou.wav" id="18_e1uhv"]
+[ext_resource type="AudioStream" uid="uid://c1a0pq44baqxj" path="res://sfx/repetir fase 2.wav" id="19_hec4h"]
+[ext_resource type="AudioStream" uid="uid://cpirkquw8vdfb" path="res://sfx/fase 2.wav" id="20_dx5ao"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qkjs"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cnoec"]
+bg_color = Color(0.952941, 0.396078, 0.376471, 1)
+
+[sub_resource type="Theme" id="Theme_e4weq"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_4qkjs")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_cnoec")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nsski"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nywxx"]
+bg_color = Color(0.960784, 0.498039, 0.65098, 1)
+
+[sub_resource type="Theme" id="Theme_wjwbt"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_nsski")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_nywxx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qlhd"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkycb"]
+bg_color = Color(0.960784, 0.611765, 0, 1)
+
+[sub_resource type="Theme" id="Theme_j0jwx"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_6qlhd")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_gkycb")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txi74"]
+bg_color = Color(0.313726, 0.705882, 0.105882, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_w7mbe"]
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_txi74")
+
+[sub_resource type="Animation" id="Animation_bxbx6"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Fritz:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Fritz:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Fritz:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"right"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../ColorRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Fritz:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Node:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Node/TextoDeFalha:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Node/BotaoFala:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../AjudaDoFritz:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Node/TextoDeAjuda:visible_ratio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Node/BotaoFala2:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Node/TextoDeFalha:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Node/TextoDeAjuda:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../Node/TextoDeIntrodução:visible_ratio")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../Node/TextoDeIntrodução:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../RightEffect:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../Node/TextoVitória:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../Node/TextoVitória:visible_ratio")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../Node/BotaoFalaWin:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../AudioStreamPlayer:playing")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../AudioStreamPlayer2:playing")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../AudioStreamPlayer3:playing")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../AudioStreamPlayer2D:playing")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_rm0yq"]
+resource_name = "help"
+length = 5.00001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AjudaDoFritz:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Node:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Fritz:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Fritz:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"right", &"idle"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Node/TextoDeAjuda:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Node/BotaoFala2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Node/TextoDeAjuda:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Node/BotaoFala:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../AudioStreamPlayer:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_5wncq"]
+resource_name = "idle"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Fritz:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Fritz:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Fritz:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Node:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AjudaDoFritz:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Node/TextoDeFalha:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Node/TextoDeAjuda:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Node/TextoDeIntrodução:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../RightEffect:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_eckmd"]
+resource_name = "intro"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AjudaDoFritz:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Node:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Fritz:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Fritz:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"right", &"idle"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Node/BotaoFala:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Node/TextoDeIntrodução:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Node/TextoDeIntrodução:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Node/BotaoFala2:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../AudioStreamPlayer2D:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_0ug0y"]
+resource_name = "right"
+length = 1.00001
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RightEffect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"effect", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../RightEffect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_nhoax"]
+resource_name = "win"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AjudaDoFritz:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Node:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Fritz:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Fritz:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 6.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"right", &"idle"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Node/BotaoFala:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Node/BotaoFala2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Node/TextoVitória:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Node/TextoVitória:visible_ratio")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 6.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Node/BotaoFalaWin:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 6.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../AudioStreamPlayer3:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_d2ich"]
+resource_name = "wrong"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Fritz:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Fritz:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"right", &"idle"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Node:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Node/TextoDeFalha:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Node/BotaoFala:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../AjudaDoFritz:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Node/TextoDeAjuda:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Node/TextoDeFalha:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Node/BotaoFala2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../AudioStreamPlayer2:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_78ggw"]
+_data = {
+"RESET": SubResource("Animation_bxbx6"),
+"help": SubResource("Animation_rm0yq"),
+"idle": SubResource("Animation_5wncq"),
+"intro": SubResource("Animation_eckmd"),
+"right": SubResource("Animation_0ug0y"),
+"win": SubResource("Animation_nhoax"),
+"wrong": SubResource("Animation_d2ich")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwrgm"]
+atlas = ExtResource("4_t2cdh")
+region = Rect2(192, 320, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je5vs"]
+atlas = ExtResource("4_t2cdh")
+region = Rect2(224, 320, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fjnf"]
+atlas = ExtResource("4_t2cdh")
+region = Rect2(256, 320, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fkuw"]
+atlas = ExtResource("4_t2cdh")
+region = Rect2(288, 320, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ae7d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwrgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je5vs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fjnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fkuw")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"effect",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_0d8oh"]
+RichTextLabel/font_sizes/normal_font_size = 127
+
+[sub_resource type="Theme" id="Theme_vd7ue"]
+RichTextLabel/font_sizes/normal_font_size = 44
+
+[sub_resource type="Theme" id="Theme_e8nk2"]
+RichTextLabel/font_sizes/normal_font_size = 46
+
+[sub_resource type="Theme" id="Theme_x446p"]
+RichTextLabel/font_sizes/normal_font_size = 64
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n66ff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wbxcb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wbxcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cto7e")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wbxcb")
+}],
+"loop": true,
+"name": &"wrong",
+"speed": 5.0
+}]
+
+[node name="Desenvolvimento" type="Node2D"]
+script = ExtResource("1_ldfjf")
+
+[node name="FundoFase2" type="Sprite2D" parent="."]
+position = Vector2(576, 428)
+scale = Vector2(0.5625, 0.5625)
+texture = ExtResource("2_nnki3")
+
+[node name="VerdeProgress" type="ProgressBar" parent="."]
+offset_left = 378.0
+offset_top = 14.0
+offset_right = 414.0
+offset_bottom = 212.0
+theme = SubResource("Theme_e4weq")
+max_value = 8.0
+value = 8.0
+rounded = true
+fill_mode = 3
+
+[node name="AzulProgress" type="ProgressBar" parent="."]
+offset_left = 666.0
+offset_top = 14.0
+offset_right = 702.0
+offset_bottom = 212.0
+theme = SubResource("Theme_wjwbt")
+max_value = 8.0
+value = 8.0
+rounded = true
+fill_mode = 3
+
+[node name="AmareloProgress" type="ProgressBar" parent="."]
+offset_left = 972.0
+offset_top = 14.0
+offset_right = 1008.0
+offset_bottom = 221.0
+theme = SubResource("Theme_j0jwx")
+max_value = 8.0
+value = 8.0
+rounded = true
+fill_mode = 3
+
+[node name="FundoFase1" type="Sprite2D" parent="."]
+position = Vector2(576, 428)
+scale = Vector2(0.5625, 0.5625)
+texture = ExtResource("4_jhcsu")
+
+[node name="VacinaProgress" type="TextureProgressBar" parent="."]
+offset_left = 448.0
+offset_top = 584.0
+offset_right = 720.0
+offset_bottom = 640.0
+theme = SubResource("Theme_w7mbe")
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("5_gm2vk")
+texture_over = ExtResource("4_4gdny")
+texture_progress = ExtResource("5_ddbb3")
+
+[node name="ProximaVacina" type="TextureButton" parent="."]
+offset_left = 928.0
+offset_top = 504.0
+offset_right = 960.0
+offset_bottom = 536.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("6_w33o5")
+
+[node name="frasco" parent="." instance=ExtResource("1_2abhv")]
+position = Vector2(592, 488)
+
+[node name="VerdeButton" type="TextureButton" parent="."]
+offset_left = 357.0
+offset_top = -56.0
+offset_right = 681.0
+offset_bottom = 1132.0
+scale = Vector2(0.25, 0.25)
+ignore_texture_size = true
+
+[node name="AzulButton" type="TextureButton" parent="."]
+offset_left = 642.0
+offset_top = -56.0
+offset_right = 978.0
+offset_bottom = 1124.0
+scale = Vector2(0.25, 0.25)
+ignore_texture_size = true
+
+[node name="AmareloButton" type="TextureButton" parent="."]
+offset_left = 949.0
+offset_top = -48.0
+offset_right = 1281.0
+offset_bottom = 1132.0
+scale = Vector2(0.25, 0.25)
+ignore_texture_size = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AmareloProgress")
+autoplay = "intro"
+libraries = {
+"": SubResource("AnimationLibrary_78ggw")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AmareloProgress")
+autoplay = "intro"
+libraries = {
+"": SubResource("AnimationLibrary_78ggw")
+}
+
+[node name="RightEffect" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0, 1, 0.164706, 1)
+position = Vector2(584, 536)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_4ae7d")
+animation = &"effect"
+autoplay = "idle"
+
+[node name="AjudaDoFritz" type="TextureButton" parent="."]
+offset_left = -36.0
+offset_top = 6.0
+offset_right = 476.0
+offset_bottom = 518.0
+rotation = 0.71067
+scale = Vector2(0.655263, 0.704545)
+texture_normal = ExtResource("8_wbxcb")
+ignore_texture_size = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.686275)
+
+[node name="Node" type="Node2D" parent="."]
+position = Vector2(377, 420)
+scale = Vector2(0.5, 0.5)
+
+[node name="TextboxComeco" type="Sprite2D" parent="Node"]
+position = Vector2(240, 192)
+texture = ExtResource("8_ycdu4")
+
+[node name="TextboxMeio" type="Sprite2D" parent="Node"]
+position = Vector2(752, 192)
+texture = ExtResource("9_7vhgm")
+
+[node name="TextboxFinal" type="Sprite2D" parent="Node"]
+position = Vector2(1264, 192)
+texture = ExtResource("10_jumem")
+
+[node name="TextoDeFalha" type="RichTextLabel" parent="Node"]
+visible = false
+offset_left = 94.0
+offset_top = 2.0
+offset_right = 1464.0
+offset_bottom = 364.0
+theme = SubResource("Theme_0d8oh")
+text = "Você errou a receita, tente novamente!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TextoDeIntrodução" type="RichTextLabel" parent="Node"]
+offset_left = 94.0
+offset_top = 2.0
+offset_right = 1464.0
+offset_bottom = 364.0
+theme = SubResource("Theme_vd7ue")
+text = "Agora vamos fabricar as vacinas, basta seguirmos estas receitas: Para vacinas de covid usamos 3 gotas rosas, 1 vermelha e 1 laranja, para a tríplice viral usamos 1 gota rosa, 2 gotas vermelhas e 2 gotas laranjas e por fim a vacina da gripe é feita com 0 gotas rosas, 3 gotas vermelhas e 2 gota laranja."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TextoDeAjuda" type="RichTextLabel" parent="Node"]
+visible = false
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 1392.0
+offset_bottom = 352.0
+theme = SubResource("Theme_e8nk2")
+text = "Receitas
+Covid:  1 gota vermelha, 3 gotas rosas, e 1 gota laranja.
+Tríplice viral: 2 gota vermelhas, 1 gotas rosas, 2 gotas laranja.
+Gripe: 3 gotas vermelhas, 0 gotas rosas, 2 gota laranja."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TextoVitória" type="RichTextLabel" parent="Node"]
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 1392.0
+offset_bottom = 352.0
+theme = SubResource("Theme_x446p")
+text = "Muito bem, você conseguiu fazer as vacinas! Agora podemos distribuí-las para quem precisa delas!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="BotaoFala" type="TextureButton" parent="Node"]
+offset_left = 1282.0
+offset_top = 220.0
+offset_right = 1346.0
+offset_bottom = 284.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("11_wawac")
+
+[node name="BotaoFala2" type="TextureButton" parent="Node"]
+offset_left = 1226.0
+offset_top = 194.0
+offset_right = 1290.0
+offset_bottom = 258.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("11_wawac")
+
+[node name="BotaoFalaWin" type="TextureButton" parent="Node"]
+visible = false
+offset_left = 1226.0
+offset_top = 194.0
+offset_right = 1290.0
+offset_bottom = 258.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("11_wawac")
+
+[node name="Fritz" type="AnimatedSprite2D" parent="."]
+position = Vector2(134, 561)
+sprite_frames = SubResource("SpriteFrames_n66ff")
+animation = &"right"
+autoplay = "idle"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 143.0
+offset_bottom = 119.0
+texture_normal = ExtResource("16_46t25")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_73hqm")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_e1uhv")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_hec4h")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_dx5ao")
+volume_db = -14.054
+autoplay = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_73hqm")
+autoplay = true
+
+[connection signal="pressed" from="ProximaVacina" to="." method="_on_proxima_vacina_pressed"]
+[connection signal="pressed" from="VerdeButton" to="." method="_on_verde_button_pressed"]
+[connection signal="pressed" from="AzulButton" to="." method="_on_azul_button_pressed"]
+[connection signal="pressed" from="AmareloButton" to="." method="_on_amarelo_button_pressed"]
+[connection signal="pressed" from="AjudaDoFritz" to="." method="_on_ajuda_do_fritz_pressed"]
+[connection signal="pressed" from="Node/BotaoFala" to="." method="_on_botao_fala_pressed"]
+[connection signal="pressed" from="Node/BotaoFala2" to="." method="_on_botao_fala_2_pressed"]
+[connection signal="pressed" from="Node/BotaoFalaWin" to="." method="_on_botao_fala_win_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_menu_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs3pkqg8a78hw"]
+
+[ext_resource type="Texture2D" uid="uid://b044bremnj0tt" path="res://fase2/sprites/Frasco.png" id="1_2l133"]
+[ext_resource type="Texture2D" uid="uid://c8njsmutn6rs2" path="res://fase2/sprites/liquido.png" id="2_gysj7"]
+
+[node name="frasco" type="Sprite2D"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_2l133")
+
+[node name="liquido" type="Sprite2D" parent="."]
+modulate = Color(1, 0.941176, 0.952941, 1)
+visibility_layer = 3
+texture = ExtResource("2_gysj7")

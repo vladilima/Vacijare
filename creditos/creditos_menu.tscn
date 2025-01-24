@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmq4xf8utc5nw"]
+
+[ext_resource type="Script" path="res://creditos/creditos.gd" id="1_rvpaq"]
+[ext_resource type="Texture2D" uid="uid://dxmq8kifvmtbg" path="res://creditos/sprites/creditos (1).png" id="2_ekkqa"]
+[ext_resource type="Texture2D" uid="uid://cqne15s2qjd2a" path="res://creditos/sprites/agradecimento (1).png" id="3_ox5g3"]
+[ext_resource type="Texture2D" uid="uid://b46yuje85l3nq" path="res://creditos/sprites/logo_nova (1).png" id="4_g2m2j"]
+[ext_resource type="Texture2D" uid="uid://cqabsrowek23o" path="res://creditos/sprites/botao retornar menu.png" id="5_00tu0"]
+[ext_resource type="AudioStream" uid="uid://dtsen3x17hc7c" path="res://sfx/creditos.wav" id="6_n3x0q"]
+
+[sub_resource type="Theme" id="Theme_cajhe"]
+RichTextLabel/font_sizes/normal_font_size = 32
+
+[node name="Creditos" type="Node2D"]
+position = Vector2(413, 396)
+scale = Vector2(0.720703, 0.720703)
+script = ExtResource("1_rvpaq")
+
+[node name="Creditos(1)" type="Sprite2D" parent="."]
+position = Vector2(219.23, -154.016)
+scale = Vector2(0.892954, 0.892954)
+texture = ExtResource("2_ekkqa")
+
+[node name="Agradecimento(1)" type="Sprite2D" parent="."]
+position = Vector2(230.331, 285.832)
+scale = Vector2(4.0008, 4.0008)
+texture = ExtResource("3_ox5g3")
+
+[node name="LogoNova(1)" type="Sprite2D" parent="."]
+position = Vector2(252.531, -471.458)
+scale = Vector2(6.42954, 6.4126)
+texture = ExtResource("4_g2m2j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -80.0
+offset_top = -375.0
+offset_right = 505.0
+offset_bottom = 194.0
+theme = SubResource("Theme_cajhe")
+text = "Este jogo foi produzido para a 2ª Game Jam, em um desafio com o tema Equilíbrio, o jogo foi desenvolvido e implementado em 60 horas, por isso, agradecemos a todos que jogaram! Ficamos muito felizes pela sua contribuição. Por favor, deixe seu feedback através do trailer do jogo, disponível no Youtube:
+Equipe AraquaTech Jogos & Bobajadas:
+Amanda de Almeida Crispim - Eng. de Software - UNIVILLE
+Matheus Muniz - TADS - UDESC
+Thuany Moraro Soares - TADS - UDESC
+Vladimir Pinto de Lima - Eng. de Software - UNIVILLE
+Agradecimentos especiais:
+Fábio Cunha - BSI/IFC -  Asset estrada fase 01
+BDragon1727 pelo pacote de assets https://bdragon1727.itch.io/free-effect-bullet-impact-explosion-32x32 Acessado em 18/06/2023
+Tallbeard Studios pelo pacote de assets https://tallbeard.itch.io/music-loop-bundle Acessado em 18/06/2023
+Mais Palco Karaokê - Música do Menu - Vou pra Santa Catarina, Banda Terceira Dimensão https://www.youtube.com/watch?v=4TKucXvCIxM  Acessado em 18/06/2023
+Acedio pela ferramenta https://github.com/Acedio/animalese.js Acessado em 18/06/2023"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 642.428
+offset_top = 88.8022
+offset_right = 960.428
+offset_bottom = 406.802
+texture_normal = ExtResource("5_00tu0")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_n3x0q")
+volume_db = -11.243
+autoplay = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

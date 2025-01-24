@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=3 uid="uid://ca24byp6y0yl4"]
+
+[ext_resource type="Texture2D" uid="uid://hya7x2dscuom" path="res://img/fase 1/poste 1 (1).png" id="1_r1h0v"]
+[ext_resource type="Texture2D" uid="uid://cx4ler3kildw8" path="res://img/fase 1/fundo_completo.png" id="1_tqwpa"]
+[ext_resource type="Texture2D" uid="uid://c8gevlpa51hjf" path="res://img/fase 1/poste 3 (1).png" id="2_juk7m"]
+[ext_resource type="Texture2D" uid="uid://blrb32mxn8n1e" path="res://img/fase 1/poste 2 (1).png" id="3_bkh20"]
+[ext_resource type="Texture2D" uid="uid://dhtfrrlgbclhf" path="res://img/fase 1/estradinha.png" id="4_m31hg"]
+[ext_resource type="Texture2D" uid="uid://cbnm65amix2gk" path="res://img/textbox meio.png" id="5_r2jor"]
+[ext_resource type="Texture2D" uid="uid://qdwanf7gcqlv" path="res://img/fase 1/planfleto covid.png" id="6_6hxdg"]
+[ext_resource type="Texture2D" uid="uid://c15ujpa7eechw" path="res://img/fase 1/panfleto triplic.png" id="7_f8rwx"]
+[ext_resource type="Script" path="res://fase 1/PANFLETOS.gd" id="7_owte4"]
+[ext_resource type="Texture2D" uid="uid://b2d1pm86vv28g" path="res://img/fase 1/panfleto gripe.png" id="8_bpk3s"]
+[ext_resource type="Texture2D" uid="uid://dl5773jp2ie37" path="res://fase 1/botao retornar menu.png" id="11_gfkjs"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("7_owte4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = -39.0
+offset_top = 3.0
+offset_right = 366.0
+offset_bottom = 452.0
+
+[node name="FundoCompleto" type="Sprite2D" parent="HBoxContainer"]
+modulate = Color(0.407843, 0.407843, 0.407843, 1)
+position = Vector2(1752, 306)
+texture = ExtResource("1_tqwpa")
+
+[node name="Poste1(1)" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(216.531, 225.5)
+scale = Vector2(3.7832, 3.63281)
+texture = ExtResource("1_r1h0v")
+
+[node name="Poste3(1)" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(701, 227)
+scale = Vector2(3.71875, 3.625)
+texture = ExtResource("2_juk7m")
+
+[node name="Poste2(1)" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(457.328, 225.125)
+scale = Vector2(4.02051, 3.56445)
+texture = ExtResource("3_bkh20")
+
+[node name="Estradinha" type="Sprite2D" parent="."]
+position = Vector2(480, 526.75)
+scale = Vector2(1.16797, 4.13281)
+texture = ExtResource("4_m31hg")
+
+[node name="TextboxMeio" type="Sprite2D" parent="."]
+position = Vector2(1057, 279)
+rotation = 1.5708
+scale = Vector2(1.43875, 1.12905)
+texture = ExtResource("5_r2jor")
+
+[node name="CidadeProgress" type="ProgressBar" parent="."]
+offset_left = 856.0
+offset_top = 587.0
+offset_right = 1140.0
+offset_bottom = 642.0
+
+[node name="Covid_ProgressBar" type="ProgressBar" parent="."]
+offset_left = 1051.0
+offset_top = 58.0
+offset_right = 1136.0
+offset_bottom = 150.0
+
+[node name="Triplic_ProgressBar" type="ProgressBar" parent="."]
+offset_left = 1052.0
+offset_top = 229.0
+offset_right = 1137.0
+offset_bottom = 321.0
+
+[node name="Gripe_ProgressBar" type="ProgressBar" parent="."]
+offset_left = 1047.0
+offset_top = 412.0
+offset_right = 1132.0
+offset_bottom = 504.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 858.0
+offset_top = 15.0
+offset_right = 1376.0
+offset_bottom = 1559.0
+scale = Vector2(0.35, 0.35)
+alignment = 1
+
+[node name="triplic" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_f8rwx")
+
+[node name="gripe" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_bpk3s")
+
+[node name="covid" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_6hxdg")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 3.0
+offset_top = -27.0
+offset_right = 125.0
+offset_bottom = 112.0
+texture_normal = ExtResource("11_gfkjs")
+stretch_mode = 0
+
+[connection signal="pressed" from="VBoxContainer/triplic" to="." method="_on_triplic_pressed"]
+[connection signal="pressed" from="VBoxContainer/gripe" to="." method="_on_gripe_pressed"]
+[connection signal="pressed" from="VBoxContainer/covid" to="." method="_on_covid_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_menu_pressed"]

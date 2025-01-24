@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://daudwhj4q0qn5"]
+
+[ext_resource type="Texture2D" uid="uid://so7r5nofdvk5" path="res://fase3/sprites/fase 3 van azul vacinada.png" id="1_0ojmy"]
+
+[node name="Van" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_0ojmy")
