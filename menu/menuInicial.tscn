@@ -1,0 +1,100 @@
+[gd_scene load_steps=11 format=3 uid="uid://celruq7d8ybsy"]
+
+[ext_resource type="Script" path="res://menu/menuInicial.gd" id="1_4rcku"]
+[ext_resource type="Texture2D" uid="uid://de2uiw235wbd3" path="res://img/menu inicio.png" id="2_xbd82"]
+[ext_resource type="Texture2D" uid="uid://dcm50xmxy68t" path="res://img/menu fases.png" id="3_eay7e"]
+[ext_resource type="Texture2D" uid="uid://5ptl6p4ucmqa" path="res://img/menu creditos.png" id="4_duyjp"]
+[ext_resource type="Texture2D" uid="uid://jclj2mmu8s65" path="res://img/menu sair.png" id="5_ydb0r"]
+[ext_resource type="Texture2D" uid="uid://ct13un8s2ekhe" path="res://img/Fritz_gigante.png" id="7_0t1s1"]
+[ext_resource type="Texture2D" uid="uid://b4qckt8mftgj2" path="res://img/logo_nova.png" id="7_qhipy"]
+[ext_resource type="AudioStream" uid="uid://dt2lo1i075j8b" path="res://sfx/musica menu.wav" id="8_qwtev"]
+[ext_resource type="Texture2D" uid="uid://dq5jb6heup33c" path="res://sfx/som sim.png" id="9_qm6na"]
+[ext_resource type="Texture2D" uid="uid://w6eh1b4mcwl3" path="res://sfx/som nao.png" id="10_mb4w4"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4rcku")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 73.0
+offset_top = -317.0
+offset_right = -525.0
+offset_bottom = 877.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+
+[node name="comecar" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+tooltip_text = "
+"
+texture_normal = ExtResource("2_xbd82")
+
+[node name="informacao" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+tooltip_text = "
+"
+texture_normal = ExtResource("3_eay7e")
+
+[node name="fases" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+tooltip_text = "
+"
+texture_normal = ExtResource("4_duyjp")
+
+[node name="sair" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+tooltip_text = "
+"
+texture_normal = ExtResource("5_ydb0r")
+
+[node name="FritzGigante" type="Sprite2D" parent="."]
+position = Vector2(772, 386)
+
+[node name="FritzGigante2" type="Sprite2D" parent="."]
+position = Vector2(839, 409)
+texture = ExtResource("7_0t1s1")
+flip_h = true
+
+[node name="LogoNova" type="Sprite2D" parent="."]
+position = Vector2(838, 87.0001)
+scale = Vector2(4.53125, 5.21875)
+texture = ExtResource("7_qhipy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qwtev")
+volume_db = -15.928
+autoplay = true
+
+[node name="Mute" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1009.0
+offset_top = 496.0
+offset_right = 1201.0
+offset_bottom = 688.0
+toggle_mode = true
+texture_normal = ExtResource("9_qm6na")
+texture_pressed = ExtResource("10_mb4w4")
+stretch_mode = 0
+
+[connection signal="pressed" from="VBoxContainer/comecar" to="." method="_on_comecar_pressed"]
+[connection signal="pressed" from="VBoxContainer/informacao" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/fases" to="." method="_on_creditosssssss_pressed"]
+[connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Mute" to="." method="_on_mute_pressed"]

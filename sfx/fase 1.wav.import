@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bce5gqiervl4k"
+path="res://.godot/imported/fase 1.wav-5b7f35c53d699fda1d0a1fa4583859d2.sample"
+
+[deps]
+
+source_file="res://sfx/fase 1.wav"
+dest_files=["res://.godot/imported/fase 1.wav-5b7f35c53d699fda1d0a1fa4583859d2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

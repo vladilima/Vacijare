@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Vacijare_Jogo"
+run/main_scene="res://menu/menuInicial.tscn"
+config/features=PackedStringArray("4.0", "Forward Plus")
+config/icon="res://img/icon.svg"
+
+[autoload]
+
+Audio="*res://audio.gd"
+
+[display]
+
+mouse_cursor/custom_image="res://img/cursor_jaré.png"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.529412, 0.321569, 0.513726, 1)
