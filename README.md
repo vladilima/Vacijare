@@ -6,4 +6,4 @@ Jogo 2D desenvolvido para a 2ª Game Jam LARVA do grupo Colméia da UDESC-CCT, c
 Link do Jogo: https://seekke.itch.io/vacijare
 
 Apresentação do Jogo:
-![Apresentação do Jogo](https://img.youtube.com/vi/f2LCVm4mmFw/0.jpg)](https://www.youtube.com/watch?v=f2LCVm4mmFw)
+[![Apresentação do Jogo](https://img.youtube.com/vi/f2LCVm4mmFw/0.jpg)](https://www.youtube.com/watch?v=f2LCVm4mmFw)
